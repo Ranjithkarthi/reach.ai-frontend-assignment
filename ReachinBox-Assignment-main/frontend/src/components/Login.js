@@ -58,7 +58,7 @@ const Login = () => {
 
     // Function to handle Google login
     const handleLogin = () => {
-        window.location.href = 'https://reach-ai-frontend-assignment.onrender.com';
+        window.location.href = 'https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=https://reach-ai-frontend-assignment.onrender.com';
     };
 
     // Handle token if present in the URL after login redirect
