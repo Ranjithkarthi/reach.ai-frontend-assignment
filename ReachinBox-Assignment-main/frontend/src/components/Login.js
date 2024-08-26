@@ -1,36 +1,3 @@
-// // frontend/src/components/Login.js
-// import React from 'react';
-// // import { useHistory } from 'react-router-dom';
-// import { useNavigate } from 'react-router-dom';
-
-// const Login = () => {
-//     // const history = useHistory();
-//     let navigate = useNavigate();
-
-//     const handleLogin = () => {
-//         window.location.href = 'https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://localhost:3000';
-//     };
-
-//     React.useEffect(() => {
-//         const params = new URLSearchParams(window.location.search);
-//         const token = params.get('token');
-//         if (token) {
-//             localStorage.setItem('token', token);
-//             navigate('/mails');
-//         }
-//     }, [navigate]);
-
-//     return (
-//         <div>
-//             <h1>Login</h1>
-//             <button onClick={handleLogin}>Login with Google</button>
-//         </div>
-//     );
-// };
-
-// export default Login;
-
-
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
@@ -91,7 +58,7 @@ const Login = () => {
 
     // Function to handle Google login
     const handleLogin = () => {
-        window.location.href = 'https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=http://localhost:3000';
+        window.location.href = 'https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=https://reach-ai-backend.onrender.com';
     };
 
     // Handle token if present in the URL after login redirect
