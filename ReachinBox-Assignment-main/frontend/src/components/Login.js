@@ -58,10 +58,10 @@ const Login = () => {
 
     // Function to handle Google login
     const handleLogin = () => {
-        window.location.href = 'https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=https://reach-ai-frontend-assignment.onrender.com';
+        window.location.href = 'https://hiring.reachinbox.xyz/api/v1/auth/google-login?redirect_to=https://reach-ai-frontend-assignment.onrender.com/';
     };
 
-
+    // Handle token if present in the URL after login redirect
     React.useEffect(() => {
         const params = new URLSearchParams(window.location.search);
         const token = params.get('token');
@@ -78,17 +78,17 @@ const Login = () => {
                 REACHINBOX
             </div>
 
-
+            {/* Main Card */}
             <div style={styles.card}>
                 <h2>Create a new account</h2>
 
-
+                {/* Google Sign In Button */}
                 <button onClick={handleLogin} style={styles.button}>
-                    // <img
-                    //     src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
-                    //     alt="Google Icon"
-                    //     style={{ width: '20px', marginRight: '8px', verticalAlign: 'middle' }}
-                    // />
+                    {/* <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+                        alt="Google Icon"
+                        style={{ width: '20px', marginRight: '8px', verticalAlign: 'middle' }}
+                    /> */}
                     Sign Up with Google
                 </button>
 
@@ -107,3 +107,4 @@ const Login = () => {
 };
 
 export default Login;
+
